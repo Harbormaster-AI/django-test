@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingsystem.views import ExchangeRateView
+from bankingSystem.views import ExchangeRateView
 
 urlpatterns = [
     path('', ExchangeRateView.index, name='index'),

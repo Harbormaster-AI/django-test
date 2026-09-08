@@ -1,7 +1,7 @@
 from django.db import models
-from bankingsystem.models.CustomerType import CustomerType
-from bankingsystem.models.RiskRating import RiskRating
-from bankingsystem.models.KycStatus import KycStatus
+from bankingSystem.models.CustomerType import CustomerType
+from bankingSystem.models.RiskRating import RiskRating
+from bankingSystem.models.KycStatus import KycStatus
 
 #======================================================================
 # 

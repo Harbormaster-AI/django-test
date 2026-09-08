@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingsystem.views import ExternalAccountView
+from bankingSystem.views import ExternalAccountView
 
 urlpatterns = [
     path('', ExternalAccountView.index, name='index'),

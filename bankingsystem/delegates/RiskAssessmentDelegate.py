@@ -3,9 +3,9 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingsystem.models.RiskAssessment import RiskAssessment
-from bankingsystem.models.KycProfile import KycProfile
-from bankingsystem.exceptions import Exceptions
+from bankingSystem.models.RiskAssessment import RiskAssessment
+from bankingSystem.models.KycProfile import KycProfile
+from bankingSystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -78,7 +78,7 @@ class RiskAssessmentDelegate :
 		
 	def assignKycProfile( self, riskAssessmentId, kycProfileId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.KycProfileDelegate import KycProfileDelegate
+		from bankingSystem.delegates.KycProfileDelegate import KycProfileDelegate
 
 		errMsg = "Failed to assign element " + str(kycProfileId) + " for KycProfile on RiskAssessment"
 

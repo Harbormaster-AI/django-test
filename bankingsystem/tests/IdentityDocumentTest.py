@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.IdentityDocument import IdentityDocument
-from bankingsystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
+from bankingSystem.models.IdentityDocument import IdentityDocument
+from bankingSystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
 
  #======================================================================
 # 

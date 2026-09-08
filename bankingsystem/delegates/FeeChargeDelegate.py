@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingsystem.models.FeeCharge import FeeCharge
-from bankingsystem.models.Account import Account
-from bankingsystem.models.LoanAccount import LoanAccount
-from bankingsystem.exceptions import Exceptions
+from bankingSystem.models.FeeCharge import FeeCharge
+from bankingSystem.models.Account import Account
+from bankingSystem.models.LoanAccount import LoanAccount
+from bankingSystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class FeeChargeDelegate :
 		
 	def assignAccount( self, feeChargeId, accountId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.AccountDelegate import AccountDelegate
+		from bankingSystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(accountId) + " for Account on FeeCharge"
 
@@ -127,7 +127,7 @@ class FeeChargeDelegate :
 		
 	def assignLoanAccount( self, feeChargeId, loanAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+		from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
 		errMsg = "Failed to assign element " + str(loanAccountId) + " for LoanAccount on FeeCharge"
 

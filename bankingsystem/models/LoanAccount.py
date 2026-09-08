@@ -1,8 +1,8 @@
 from django.db import models
-from bankingsystem.models.LoanType import LoanType
-from bankingsystem.models.RateType import RateType
-from bankingsystem.models.InterestCompounding import InterestCompounding
-from bankingsystem.models.LoanStatus import LoanStatus
+from bankingSystem.models.LoanType import LoanType
+from bankingSystem.models.RateType import RateType
+from bankingSystem.models.InterestCompounding import InterestCompounding
+from bankingSystem.models.LoanStatus import LoanStatus
 
 #======================================================================
 # 

@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.Consent import Consent
-from bankingsystem.delegates.ConsentDelegate import ConsentDelegate
+from bankingSystem.models.Consent import Consent
+from bankingSystem.delegates.ConsentDelegate import ConsentDelegate
 
  #======================================================================
 # 

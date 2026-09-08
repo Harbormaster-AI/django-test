@@ -7,7 +7,7 @@ Harbormaster
 
 
 ## Application
-- Name: bankingsystem
+- Name: bankingSystem
 - Description: Banking System
 - Company Name: 
 

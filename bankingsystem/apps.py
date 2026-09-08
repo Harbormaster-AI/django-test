@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
-class bankingsystemConfig(AppConfig):
-    name = 'bankingsystem'
+class bankingSystemConfig(AppConfig):
+    name = 'bankingSystem'

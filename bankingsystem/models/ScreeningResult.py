@@ -1,5 +1,5 @@
 from django.db import models
-from bankingsystem.models.ScreeningOutcome import ScreeningOutcome
+from bankingSystem.models.ScreeningOutcome import ScreeningOutcome
 
 #======================================================================
 # 

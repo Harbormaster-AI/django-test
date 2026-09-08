@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingsystem.views import IdentityDocumentView
+from bankingSystem.views import IdentityDocumentView
 
 urlpatterns = [
     path('', IdentityDocumentView.index, name='index'),

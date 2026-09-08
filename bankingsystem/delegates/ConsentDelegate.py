@@ -3,12 +3,12 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingsystem.models.Consent import Consent
-from bankingsystem.models.Customer import Customer
-from bankingsystem.models.Bank import Bank
-from bankingsystem.models.Account import Account
-from bankingsystem.models.ThirdPartyProvider import ThirdPartyProvider
-from bankingsystem.exceptions import Exceptions
+from bankingSystem.models.Consent import Consent
+from bankingSystem.models.Customer import Customer
+from bankingSystem.models.Bank import Bank
+from bankingSystem.models.Account import Account
+from bankingSystem.models.ThirdPartyProvider import ThirdPartyProvider
+from bankingSystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -81,7 +81,7 @@ class ConsentDelegate :
 		
 	def assignCustomer( self, consentId, customerId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(customerId) + " for Customer on Consent"
 
@@ -129,7 +129,7 @@ class ConsentDelegate :
 		
 	def assignBank( self, consentId, bankId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.BankDelegate import BankDelegate
+		from bankingSystem.delegates.BankDelegate import BankDelegate
 
 		errMsg = "Failed to assign element " + str(bankId) + " for Bank on Consent"
 
@@ -177,7 +177,7 @@ class ConsentDelegate :
 		
 	def assignThirdPartyProvider( self, consentId, thirdPartyProviderId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.ThirdPartyProviderDelegate import ThirdPartyProviderDelegate
+		from bankingSystem.delegates.ThirdPartyProviderDelegate import ThirdPartyProviderDelegate
 
 		errMsg = "Failed to assign element " + str(thirdPartyProviderId) + " for ThirdPartyProvider on Consent"
 
@@ -225,7 +225,7 @@ class ConsentDelegate :
 		
 	def addAuthorizedAccounts( self, consentId, authorizedAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.AccountDelegate import AccountDelegate
+		from bankingSystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to add elements " + str(authorizedAccountsIds) + " for AuthorizedAccounts on Consent"
 
@@ -258,7 +258,7 @@ class ConsentDelegate :
 		
 	def removeAuthorizedAccounts( self, consentId, authorizedAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.AccountDelegate import AccountDelegate
+		from bankingSystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to remove elements " + str(authorizedAccountsIds) + " for AuthorizedAccounts on Consent"
 
