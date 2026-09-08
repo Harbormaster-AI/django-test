@@ -26,7 +26,8 @@
     "languages": {
         "language": [
         {
-          "name": "python"
+          "name": "python",
+          "version": "3.13"
         },
         {
           "name": "javascript"
