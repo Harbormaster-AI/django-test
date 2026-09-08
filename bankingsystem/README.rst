@@ -1,6 +1,6 @@
 
 =====
-bankingsystem
+bankingSystem
 =====
 
 Banking System

@@ -1,5 +1,5 @@
 from django.db import models
-from bankingsystem.models.DisputeStatus import DisputeStatus
+from bankingSystem.models.DisputeStatus import DisputeStatus
 
 #======================================================================
 # 

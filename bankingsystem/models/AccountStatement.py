@@ -1,5 +1,5 @@
 from django.db import models
-from bankingsystem.models.StatementDeliveryMethod import StatementDeliveryMethod
+from bankingSystem.models.StatementDeliveryMethod import StatementDeliveryMethod
 
 #======================================================================
 # 

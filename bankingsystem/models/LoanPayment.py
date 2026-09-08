@@ -1,6 +1,6 @@
 from django.db import models
-from bankingsystem.models.PaymentMethod import PaymentMethod
-from bankingsystem.models.PaymentStatus import PaymentStatus
+from bankingSystem.models.PaymentMethod import PaymentMethod
+from bankingSystem.models.PaymentStatus import PaymentStatus
 
 #======================================================================
 # 

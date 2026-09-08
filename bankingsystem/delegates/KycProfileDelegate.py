@@ -3,12 +3,12 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingsystem.models.KycProfile import KycProfile
-from bankingsystem.models.Customer import Customer
-from bankingsystem.models.IdentityDocument import IdentityDocument
-from bankingsystem.models.RiskAssessment import RiskAssessment
-from bankingsystem.models.ScreeningResult import ScreeningResult
-from bankingsystem.exceptions import Exceptions
+from bankingSystem.models.KycProfile import KycProfile
+from bankingSystem.models.Customer import Customer
+from bankingSystem.models.IdentityDocument import IdentityDocument
+from bankingSystem.models.RiskAssessment import RiskAssessment
+from bankingSystem.models.ScreeningResult import ScreeningResult
+from bankingSystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -81,7 +81,7 @@ class KycProfileDelegate :
 		
 	def assignCustomer( self, kycProfileId, customerId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(customerId) + " for Customer on KycProfile"
 
@@ -129,7 +129,7 @@ class KycProfileDelegate :
 		
 	def addIdentityDocuments( self, kycProfileId, identityDocumentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
+		from bankingSystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
 
 		errMsg = "Failed to add elements " + str(identityDocumentsIds) + " for IdentityDocuments on KycProfile"
 
@@ -162,7 +162,7 @@ class KycProfileDelegate :
 		
 	def removeIdentityDocuments( self, kycProfileId, identityDocumentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
+		from bankingSystem.delegates.IdentityDocumentDelegate import IdentityDocumentDelegate
 
 		errMsg = "Failed to remove elements " + str(identityDocumentsIds) + " for IdentityDocuments on KycProfile"
 
@@ -196,7 +196,7 @@ class KycProfileDelegate :
 		
 	def addRiskAssessments( self, kycProfileId, riskAssessmentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
+		from bankingSystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
 
 		errMsg = "Failed to add elements " + str(riskAssessmentsIds) + " for RiskAssessments on KycProfile"
 
@@ -229,7 +229,7 @@ class KycProfileDelegate :
 		
 	def removeRiskAssessments( self, kycProfileId, riskAssessmentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
+		from bankingSystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
 
 		errMsg = "Failed to remove elements " + str(riskAssessmentsIds) + " for RiskAssessments on KycProfile"
 
@@ -263,7 +263,7 @@ class KycProfileDelegate :
 		
 	def addScreenings( self, kycProfileId, screeningsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
+		from bankingSystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
 
 		errMsg = "Failed to add elements " + str(screeningsIds) + " for Screenings on KycProfile"
 
@@ -296,7 +296,7 @@ class KycProfileDelegate :
 		
 	def removeScreenings( self, kycProfileId, screeningsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
+		from bankingSystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
 
 		errMsg = "Failed to remove elements " + str(screeningsIds) + " for Screenings on KycProfile"
 

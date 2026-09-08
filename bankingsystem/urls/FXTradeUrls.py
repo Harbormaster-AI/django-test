@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingsystem.views import FXTradeView
+from bankingSystem.views import FXTradeView
 
 urlpatterns = [
     path('', FXTradeView.index, name='index'),

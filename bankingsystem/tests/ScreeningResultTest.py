@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.ScreeningResult import ScreeningResult
-from bankingsystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
+from bankingSystem.models.ScreeningResult import ScreeningResult
+from bankingSystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
 
  #======================================================================
 # 

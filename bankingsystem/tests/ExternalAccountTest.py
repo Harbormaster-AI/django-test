@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.ExternalAccount import ExternalAccount
-from bankingsystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
+from bankingSystem.models.ExternalAccount import ExternalAccount
+from bankingSystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
 
  #======================================================================
 # 

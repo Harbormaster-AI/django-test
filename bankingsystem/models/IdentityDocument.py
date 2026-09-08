@@ -1,5 +1,5 @@
 from django.db import models
-from bankingsystem.models.IdentityDocumentType import IdentityDocumentType
+from bankingSystem.models.IdentityDocumentType import IdentityDocumentType
 
 #======================================================================
 # 

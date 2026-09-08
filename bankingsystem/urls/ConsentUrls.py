@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingsystem.views import ConsentView
+from bankingSystem.views import ConsentView
 
 urlpatterns = [
     path('', ConsentView.index, name='index'),

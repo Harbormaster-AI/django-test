@@ -1,6 +1,6 @@
 from django.db import models
-from bankingsystem.models.StandingInstructionFrequency import StandingInstructionFrequency
-from bankingsystem.models.StandingInstructionStatus import StandingInstructionStatus
+from bankingSystem.models.StandingInstructionFrequency import StandingInstructionFrequency
+from bankingSystem.models.StandingInstructionStatus import StandingInstructionStatus
 
 #======================================================================
 # 

@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.StandingInstruction import StandingInstruction
-from bankingsystem.delegates.StandingInstructionDelegate import StandingInstructionDelegate
+from bankingSystem.models.StandingInstruction import StandingInstruction
+from bankingSystem.delegates.StandingInstructionDelegate import StandingInstructionDelegate
 
  #======================================================================
 # 

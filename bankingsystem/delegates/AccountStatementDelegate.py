@@ -3,9 +3,9 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingsystem.models.AccountStatement import AccountStatement
-from bankingsystem.models.Account import Account
-from bankingsystem.exceptions import Exceptions
+from bankingSystem.models.AccountStatement import AccountStatement
+from bankingSystem.models.Account import Account
+from bankingSystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -78,7 +78,7 @@ class AccountStatementDelegate :
 		
 	def assignAccount( self, accountStatementId, accountId ):
 		# lazy importing avoids circular dependencies
-		from bankingsystem.delegates.AccountDelegate import AccountDelegate
+		from bankingSystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(accountId) + " for Account on AccountStatement"
 

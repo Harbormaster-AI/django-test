@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingsystem.models.RiskAssessment import RiskAssessment
-from bankingsystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
+from bankingSystem.models.RiskAssessment import RiskAssessment
+from bankingSystem.delegates.RiskAssessmentDelegate import RiskAssessmentDelegate
 
  #======================================================================
 # 

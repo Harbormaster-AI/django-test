@@ -1,8 +1,8 @@
 from django.db import models
-from bankingsystem.models.TransactionDirection import TransactionDirection
-from bankingsystem.models.TransactionType import TransactionType
-from bankingsystem.models.TransactionStatus import TransactionStatus
-from bankingsystem.models.ChannelType import ChannelType
+from bankingSystem.models.TransactionDirection import TransactionDirection
+from bankingSystem.models.TransactionType import TransactionType
+from bankingSystem.models.TransactionStatus import TransactionStatus
+from bankingSystem.models.ChannelType import ChannelType
 
 #======================================================================
 # 

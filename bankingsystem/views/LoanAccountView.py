@@ -4,7 +4,7 @@ from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
  #======================================================================
 # 
