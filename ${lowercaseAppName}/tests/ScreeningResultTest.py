@@ -1,0 +1,38 @@
+import datetime
+
+from django.test import TestCase
+from django.utils import timezone
+from bankingsystem.models.ScreeningResult import ScreeningResult
+from bankingsystem.delegates.ScreeningResultDelegate import ScreeningResultDelegate
+
+ #======================================================================
+# 
+# Encapsulates data for model ScreeningResult
+#
+# @author Harbormaster Dev Team
+#
+#======================================================================
+
+#======================================================================
+# Class ScreeningResultTest Declaration
+#======================================================================
+class ScreeningResultTest (TestCase) :
+	def test_crud(self) :
+		screeningResult = ScreeningResult()
+		screeningResult.screeningDate = datetime.datetime.now()
+		screeningResult.provider = "default provider field value"
+		screeningResult.outcome = "default outcome field value"
+		
+		delegate = ScreeningResultDelegate()
+		responseObj = delegate.create(screeningResult)
+		
+		self.assertEqual(responseObj, delegate.get( responseObj.id ))
+	
+		allObj = delegate.getAll()
+		self.assertEqual(allObj.count(), 1 )		
+		delegate.delete(responseObj.id)
+		
+		allObj = delegate.getAll()
+		self.assertEqual(allObj.count(), 0 )		
+
+
