@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.ExternalAccount import ExternalAccount
-from bankingSystem.models.Customer import Customer
-from bankingSystem.models.Transaction import Transaction
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.ExternalAccount import ExternalAccount
+from bankingsystem.models.Customer import Customer
+from bankingsystem.models.Transaction import Transaction
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class ExternalAccountDelegate :
 		
 	def assignCustomer( self, externalAccountId, customerId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(customerId) + " for Customer on ExternalAccount"
 
@@ -127,7 +127,7 @@ class ExternalAccountDelegate :
 		
 	def addTransactions( self, externalAccountId, transactionsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to add elements " + str(transactionsIds) + " for Transactions on ExternalAccount"
 
@@ -160,7 +160,7 @@ class ExternalAccountDelegate :
 		
 	def removeTransactions( self, externalAccountId, transactionsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to remove elements " + str(transactionsIds) + " for Transactions on ExternalAccount"
 

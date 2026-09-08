@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.ExchangeRate import ExchangeRate
-from bankingSystem.delegates.ExchangeRateDelegate import ExchangeRateDelegate
+from bankingsystem.models.ExchangeRate import ExchangeRate
+from bankingsystem.delegates.ExchangeRateDelegate import ExchangeRateDelegate
 
  #======================================================================
 # 

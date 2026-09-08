@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.FeeType import FeeType
+from bankingsystem.models.FeeType import FeeType
 
 #======================================================================
 # 

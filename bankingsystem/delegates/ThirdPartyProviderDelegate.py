@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.ThirdPartyProvider import ThirdPartyProvider
-from bankingSystem.models.Bank import Bank
-from bankingSystem.models.Consent import Consent
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.ThirdPartyProvider import ThirdPartyProvider
+from bankingsystem.models.Bank import Bank
+from bankingsystem.models.Consent import Consent
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class ThirdPartyProviderDelegate :
 		
 	def assignBank( self, thirdPartyProviderId, bankId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.BankDelegate import BankDelegate
+		from bankingsystem.delegates.BankDelegate import BankDelegate
 
 		errMsg = "Failed to assign element " + str(bankId) + " for Bank on ThirdPartyProvider"
 
@@ -127,7 +127,7 @@ class ThirdPartyProviderDelegate :
 		
 	def addConsents( self, thirdPartyProviderId, consentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ConsentDelegate import ConsentDelegate
+		from bankingsystem.delegates.ConsentDelegate import ConsentDelegate
 
 		errMsg = "Failed to add elements " + str(consentsIds) + " for Consents on ThirdPartyProvider"
 
@@ -160,7 +160,7 @@ class ThirdPartyProviderDelegate :
 		
 	def removeConsents( self, thirdPartyProviderId, consentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ConsentDelegate import ConsentDelegate
+		from bankingsystem.delegates.ConsentDelegate import ConsentDelegate
 
 		errMsg = "Failed to remove elements " + str(consentsIds) + " for Consents on ThirdPartyProvider"
 

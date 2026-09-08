@@ -3,12 +3,12 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.Dispute import Dispute
-from bankingSystem.models.Transaction import Transaction
-from bankingSystem.models.Customer import Customer
-from bankingSystem.models.Account import Account
-from bankingSystem.models.PaymentCard import PaymentCard
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.Dispute import Dispute
+from bankingsystem.models.Transaction import Transaction
+from bankingsystem.models.Customer import Customer
+from bankingsystem.models.Account import Account
+from bankingsystem.models.PaymentCard import PaymentCard
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -81,7 +81,7 @@ class DisputeDelegate :
 		
 	def assignTransaction( self, disputeId, transactionId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to assign element " + str(transactionId) + " for Transaction on Dispute"
 
@@ -129,7 +129,7 @@ class DisputeDelegate :
 		
 	def assignCustomer( self, disputeId, customerId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(customerId) + " for Customer on Dispute"
 
@@ -177,7 +177,7 @@ class DisputeDelegate :
 		
 	def assignAccount( self, disputeId, accountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(accountId) + " for Account on Dispute"
 
@@ -225,7 +225,7 @@ class DisputeDelegate :
 		
 	def assignPaymentCard( self, disputeId, paymentCardId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.PaymentCardDelegate import PaymentCardDelegate
+		from bankingsystem.delegates.PaymentCardDelegate import PaymentCardDelegate
 
 		errMsg = "Failed to assign element " + str(paymentCardId) + " for PaymentCard on Dispute"
 

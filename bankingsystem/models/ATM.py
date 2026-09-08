@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.ATMStatus import ATMStatus
+from bankingsystem.models.ATMStatus import ATMStatus
 
 #======================================================================
 # 

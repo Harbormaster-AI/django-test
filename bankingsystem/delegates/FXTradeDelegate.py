@@ -3,13 +3,13 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.FXTrade import FXTrade
-from bankingSystem.models.Customer import Customer
-from bankingSystem.models.Bank import Bank
-from bankingSystem.models.ExchangeRate import ExchangeRate
-from bankingSystem.models.Account import Account
-from bankingSystem.models.Transaction import Transaction
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.FXTrade import FXTrade
+from bankingsystem.models.Customer import Customer
+from bankingsystem.models.Bank import Bank
+from bankingsystem.models.ExchangeRate import ExchangeRate
+from bankingsystem.models.Account import Account
+from bankingsystem.models.Transaction import Transaction
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -82,7 +82,7 @@ class FXTradeDelegate :
 		
 	def assignCustomer( self, fXTradeId, customerId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(customerId) + " for Customer on FXTrade"
 
@@ -130,7 +130,7 @@ class FXTradeDelegate :
 		
 	def assignBank( self, fXTradeId, bankId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.BankDelegate import BankDelegate
+		from bankingsystem.delegates.BankDelegate import BankDelegate
 
 		errMsg = "Failed to assign element " + str(bankId) + " for Bank on FXTrade"
 
@@ -178,7 +178,7 @@ class FXTradeDelegate :
 		
 	def assignExchangeRate( self, fXTradeId, exchangeRateId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ExchangeRateDelegate import ExchangeRateDelegate
+		from bankingsystem.delegates.ExchangeRateDelegate import ExchangeRateDelegate
 
 		errMsg = "Failed to assign element " + str(exchangeRateId) + " for ExchangeRate on FXTrade"
 
@@ -226,7 +226,7 @@ class FXTradeDelegate :
 		
 	def assignSourceAccount( self, fXTradeId, sourceAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(sourceAccountId) + " for SourceAccount on FXTrade"
 
@@ -274,7 +274,7 @@ class FXTradeDelegate :
 		
 	def assignDestinationAccount( self, fXTradeId, destinationAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(destinationAccountId) + " for DestinationAccount on FXTrade"
 
@@ -322,7 +322,7 @@ class FXTradeDelegate :
 		
 	def assignTransaction( self, fXTradeId, transactionId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to assign element " + str(transactionId) + " for Transaction on FXTrade"
 

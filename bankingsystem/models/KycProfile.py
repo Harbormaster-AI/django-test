@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.KycStatus import KycStatus
+from bankingsystem.models.KycStatus import KycStatus
 
 #======================================================================
 # 

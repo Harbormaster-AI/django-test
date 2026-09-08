@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.ExchangeRate import ExchangeRate
-from bankingSystem.models.Bank import Bank
-from bankingSystem.models.FXTrade import FXTrade
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.ExchangeRate import ExchangeRate
+from bankingsystem.models.Bank import Bank
+from bankingsystem.models.FXTrade import FXTrade
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class ExchangeRateDelegate :
 		
 	def assignBank( self, exchangeRateId, bankId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.BankDelegate import BankDelegate
+		from bankingsystem.delegates.BankDelegate import BankDelegate
 
 		errMsg = "Failed to assign element " + str(bankId) + " for Bank on ExchangeRate"
 
@@ -127,7 +127,7 @@ class ExchangeRateDelegate :
 		
 	def addFxTrades( self, exchangeRateId, fxTradesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.FXTradeDelegate import FXTradeDelegate
+		from bankingsystem.delegates.FXTradeDelegate import FXTradeDelegate
 
 		errMsg = "Failed to add elements " + str(fxTradesIds) + " for FxTrades on ExchangeRate"
 
@@ -160,7 +160,7 @@ class ExchangeRateDelegate :
 		
 	def removeFxTrades( self, exchangeRateId, fxTradesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.FXTradeDelegate import FXTradeDelegate
+		from bankingsystem.delegates.FXTradeDelegate import FXTradeDelegate
 
 		errMsg = "Failed to remove elements " + str(fxTradesIds) + " for FxTrades on ExchangeRate"
 

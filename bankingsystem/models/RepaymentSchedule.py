@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.InstallmentStatus import InstallmentStatus
+from bankingsystem.models.InstallmentStatus import InstallmentStatus
 
 #======================================================================
 # 

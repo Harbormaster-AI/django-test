@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.RiskRating import RiskRating
+from bankingsystem.models.RiskRating import RiskRating
 
 #======================================================================
 # 

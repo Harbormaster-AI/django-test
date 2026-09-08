@@ -3,9 +3,9 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.Collateral import Collateral
-from bankingSystem.models.LoanAccount import LoanAccount
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.Collateral import Collateral
+from bankingsystem.models.LoanAccount import LoanAccount
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -78,7 +78,7 @@ class CollateralDelegate :
 		
 	def assignLoanAccount( self, collateralId, loanAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+		from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
 		errMsg = "Failed to assign element " + str(loanAccountId) + " for LoanAccount on Collateral"
 

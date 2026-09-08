@@ -4,7 +4,7 @@ from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from bankingSystem.delegates.DisputeDelegate import DisputeDelegate
+from bankingsystem.delegates.DisputeDelegate import DisputeDelegate
 
  #======================================================================
 # 

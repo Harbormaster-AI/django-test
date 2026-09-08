@@ -3,12 +3,12 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.FundsTransfer import FundsTransfer
-from bankingSystem.models.Account import Account
-from bankingSystem.models.ExternalAccount import ExternalAccount
-from bankingSystem.models.Customer import Customer
-from bankingSystem.models.Transaction import Transaction
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.FundsTransfer import FundsTransfer
+from bankingsystem.models.Account import Account
+from bankingsystem.models.ExternalAccount import ExternalAccount
+from bankingsystem.models.Customer import Customer
+from bankingsystem.models.Transaction import Transaction
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -81,7 +81,7 @@ class FundsTransferDelegate :
 		
 	def assignSourceAccount( self, fundsTransferId, sourceAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(sourceAccountId) + " for SourceAccount on FundsTransfer"
 
@@ -129,7 +129,7 @@ class FundsTransferDelegate :
 		
 	def assignDestinationAccount( self, fundsTransferId, destinationAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(destinationAccountId) + " for DestinationAccount on FundsTransfer"
 
@@ -177,7 +177,7 @@ class FundsTransferDelegate :
 		
 	def assignExternalBeneficiary( self, fundsTransferId, externalBeneficiaryId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
+		from bankingsystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
 
 		errMsg = "Failed to assign element " + str(externalBeneficiaryId) + " for ExternalBeneficiary on FundsTransfer"
 
@@ -225,7 +225,7 @@ class FundsTransferDelegate :
 		
 	def assignInitiatedBy( self, fundsTransferId, initiatedById ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.CustomerDelegate import CustomerDelegate
+		from bankingsystem.delegates.CustomerDelegate import CustomerDelegate
 
 		errMsg = "Failed to assign element " + str(initiatedById) + " for InitiatedBy on FundsTransfer"
 
@@ -273,7 +273,7 @@ class FundsTransferDelegate :
 		
 	def addTransactions( self, fundsTransferId, transactionsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to add elements " + str(transactionsIds) + " for Transactions on FundsTransfer"
 
@@ -306,7 +306,7 @@ class FundsTransferDelegate :
 		
 	def removeTransactions( self, fundsTransferId, transactionsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.TransactionDelegate import TransactionDelegate
+		from bankingsystem.delegates.TransactionDelegate import TransactionDelegate
 
 		errMsg = "Failed to remove elements " + str(transactionsIds) + " for Transactions on FundsTransfer"
 

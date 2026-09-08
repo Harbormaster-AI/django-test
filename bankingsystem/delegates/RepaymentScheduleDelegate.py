@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.RepaymentSchedule import RepaymentSchedule
-from bankingSystem.models.LoanAccount import LoanAccount
-from bankingSystem.models.LoanPayment import LoanPayment
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.RepaymentSchedule import RepaymentSchedule
+from bankingsystem.models.LoanAccount import LoanAccount
+from bankingsystem.models.LoanPayment import LoanPayment
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class RepaymentScheduleDelegate :
 		
 	def assignLoanAccount( self, repaymentScheduleId, loanAccountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+		from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
 		errMsg = "Failed to assign element " + str(loanAccountId) + " for LoanAccount on RepaymentSchedule"
 
@@ -127,7 +127,7 @@ class RepaymentScheduleDelegate :
 		
 	def assignPayment( self, repaymentScheduleId, paymentId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.LoanPaymentDelegate import LoanPaymentDelegate
+		from bankingsystem.delegates.LoanPaymentDelegate import LoanPaymentDelegate
 
 		errMsg = "Failed to assign element " + str(paymentId) + " for Payment on RepaymentSchedule"
 

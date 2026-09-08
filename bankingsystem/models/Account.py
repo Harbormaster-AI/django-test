@@ -1,7 +1,7 @@
 from django.db import models
-from bankingSystem.models.AccountType import AccountType
-from bankingSystem.models.AccountOwnershipType import AccountOwnershipType
-from bankingSystem.models.AccountStatus import AccountStatus
+from bankingsystem.models.AccountType import AccountType
+from bankingsystem.models.AccountOwnershipType import AccountOwnershipType
+from bankingsystem.models.AccountStatus import AccountStatus
 
 #======================================================================
 # 

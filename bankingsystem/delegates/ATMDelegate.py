@@ -3,9 +3,9 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.ATM import ATM
-from bankingSystem.models.Branch import Branch
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.ATM import ATM
+from bankingsystem.models.Branch import Branch
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -78,7 +78,7 @@ class ATMDelegate :
 		
 	def assignBranch( self, aTMId, branchId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.BranchDelegate import BranchDelegate
+		from bankingsystem.delegates.BranchDelegate import BranchDelegate
 
 		errMsg = "Failed to assign element " + str(branchId) + " for Branch on ATM"
 

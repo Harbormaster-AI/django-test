@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingSystem.views import DisputeView
+from bankingsystem.views import DisputeView
 
 urlpatterns = [
     path('', DisputeView.index, name='index'),

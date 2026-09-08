@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.Bank import Bank
-from bankingSystem.delegates.BankDelegate import BankDelegate
+from bankingsystem.models.Bank import Bank
+from bankingsystem.delegates.BankDelegate import BankDelegate
 
  #======================================================================
 # 

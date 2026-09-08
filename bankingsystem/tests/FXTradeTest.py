@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.FXTrade import FXTrade
-from bankingSystem.delegates.FXTradeDelegate import FXTradeDelegate
+from bankingsystem.models.FXTrade import FXTrade
+from bankingsystem.delegates.FXTradeDelegate import FXTradeDelegate
 
  #======================================================================
 # 

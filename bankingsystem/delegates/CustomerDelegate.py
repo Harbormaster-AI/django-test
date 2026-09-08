@@ -3,17 +3,17 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.Customer import Customer
-from bankingSystem.models.Bank import Bank
-from bankingSystem.models.Account import Account
-from bankingSystem.models.LoanAccount import LoanAccount
-from bankingSystem.models.PaymentCard import PaymentCard
-from bankingSystem.models.ExternalAccount import ExternalAccount
-from bankingSystem.models.FundsTransfer import FundsTransfer
-from bankingSystem.models.Dispute import Dispute
-from bankingSystem.models.KycProfile import KycProfile
-from bankingSystem.models.Consent import Consent
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.Customer import Customer
+from bankingsystem.models.Bank import Bank
+from bankingsystem.models.Account import Account
+from bankingsystem.models.LoanAccount import LoanAccount
+from bankingsystem.models.PaymentCard import PaymentCard
+from bankingsystem.models.ExternalAccount import ExternalAccount
+from bankingsystem.models.FundsTransfer import FundsTransfer
+from bankingsystem.models.Dispute import Dispute
+from bankingsystem.models.KycProfile import KycProfile
+from bankingsystem.models.Consent import Consent
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -86,7 +86,7 @@ class CustomerDelegate :
 		
 	def assignBank( self, customerId, bankId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.BankDelegate import BankDelegate
+		from bankingsystem.delegates.BankDelegate import BankDelegate
 
 		errMsg = "Failed to assign element " + str(bankId) + " for Bank on Customer"
 
@@ -134,7 +134,7 @@ class CustomerDelegate :
 		
 	def addAccounts( self, customerId, accountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to add elements " + str(accountsIds) + " for Accounts on Customer"
 
@@ -167,7 +167,7 @@ class CustomerDelegate :
 		
 	def removeAccounts( self, customerId, accountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to remove elements " + str(accountsIds) + " for Accounts on Customer"
 
@@ -201,7 +201,7 @@ class CustomerDelegate :
 		
 	def addLoanAccounts( self, customerId, loanAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+		from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
 		errMsg = "Failed to add elements " + str(loanAccountsIds) + " for LoanAccounts on Customer"
 
@@ -234,7 +234,7 @@ class CustomerDelegate :
 		
 	def removeLoanAccounts( self, customerId, loanAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.LoanAccountDelegate import LoanAccountDelegate
+		from bankingsystem.delegates.LoanAccountDelegate import LoanAccountDelegate
 
 		errMsg = "Failed to remove elements " + str(loanAccountsIds) + " for LoanAccounts on Customer"
 
@@ -268,7 +268,7 @@ class CustomerDelegate :
 		
 	def addPaymentCards( self, customerId, paymentCardsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.PaymentCardDelegate import PaymentCardDelegate
+		from bankingsystem.delegates.PaymentCardDelegate import PaymentCardDelegate
 
 		errMsg = "Failed to add elements " + str(paymentCardsIds) + " for PaymentCards on Customer"
 
@@ -301,7 +301,7 @@ class CustomerDelegate :
 		
 	def removePaymentCards( self, customerId, paymentCardsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.PaymentCardDelegate import PaymentCardDelegate
+		from bankingsystem.delegates.PaymentCardDelegate import PaymentCardDelegate
 
 		errMsg = "Failed to remove elements " + str(paymentCardsIds) + " for PaymentCards on Customer"
 
@@ -335,7 +335,7 @@ class CustomerDelegate :
 		
 	def addExternalAccounts( self, customerId, externalAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
+		from bankingsystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
 
 		errMsg = "Failed to add elements " + str(externalAccountsIds) + " for ExternalAccounts on Customer"
 
@@ -368,7 +368,7 @@ class CustomerDelegate :
 		
 	def removeExternalAccounts( self, customerId, externalAccountsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
+		from bankingsystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
 
 		errMsg = "Failed to remove elements " + str(externalAccountsIds) + " for ExternalAccounts on Customer"
 
@@ -402,7 +402,7 @@ class CustomerDelegate :
 		
 	def addFundsTransfers( self, customerId, fundsTransfersIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.FundsTransferDelegate import FundsTransferDelegate
+		from bankingsystem.delegates.FundsTransferDelegate import FundsTransferDelegate
 
 		errMsg = "Failed to add elements " + str(fundsTransfersIds) + " for FundsTransfers on Customer"
 
@@ -435,7 +435,7 @@ class CustomerDelegate :
 		
 	def removeFundsTransfers( self, customerId, fundsTransfersIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.FundsTransferDelegate import FundsTransferDelegate
+		from bankingsystem.delegates.FundsTransferDelegate import FundsTransferDelegate
 
 		errMsg = "Failed to remove elements " + str(fundsTransfersIds) + " for FundsTransfers on Customer"
 
@@ -469,7 +469,7 @@ class CustomerDelegate :
 		
 	def addDisputes( self, customerId, disputesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.DisputeDelegate import DisputeDelegate
+		from bankingsystem.delegates.DisputeDelegate import DisputeDelegate
 
 		errMsg = "Failed to add elements " + str(disputesIds) + " for Disputes on Customer"
 
@@ -502,7 +502,7 @@ class CustomerDelegate :
 		
 	def removeDisputes( self, customerId, disputesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.DisputeDelegate import DisputeDelegate
+		from bankingsystem.delegates.DisputeDelegate import DisputeDelegate
 
 		errMsg = "Failed to remove elements " + str(disputesIds) + " for Disputes on Customer"
 
@@ -536,7 +536,7 @@ class CustomerDelegate :
 		
 	def addKycProfiles( self, customerId, kycProfilesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.KycProfileDelegate import KycProfileDelegate
+		from bankingsystem.delegates.KycProfileDelegate import KycProfileDelegate
 
 		errMsg = "Failed to add elements " + str(kycProfilesIds) + " for KycProfiles on Customer"
 
@@ -569,7 +569,7 @@ class CustomerDelegate :
 		
 	def removeKycProfiles( self, customerId, kycProfilesIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.KycProfileDelegate import KycProfileDelegate
+		from bankingsystem.delegates.KycProfileDelegate import KycProfileDelegate
 
 		errMsg = "Failed to remove elements " + str(kycProfilesIds) + " for KycProfiles on Customer"
 
@@ -603,7 +603,7 @@ class CustomerDelegate :
 		
 	def addConsents( self, customerId, consentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ConsentDelegate import ConsentDelegate
+		from bankingsystem.delegates.ConsentDelegate import ConsentDelegate
 
 		errMsg = "Failed to add elements " + str(consentsIds) + " for Consents on Customer"
 
@@ -636,7 +636,7 @@ class CustomerDelegate :
 		
 	def removeConsents( self, customerId, consentsIds ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ConsentDelegate import ConsentDelegate
+		from bankingsystem.delegates.ConsentDelegate import ConsentDelegate
 
 		errMsg = "Failed to remove elements " + str(consentsIds) + " for Consents on Customer"
 

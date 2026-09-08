@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingSystem.views import KycProfileView
+from bankingsystem.views import KycProfileView
 
 urlpatterns = [
     path('', KycProfileView.index, name='index'),

@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingSystem.views import PaymentCardView
+from bankingsystem.views import PaymentCardView
 
 urlpatterns = [
     path('', PaymentCardView.index, name='index'),

@@ -1,6 +1,6 @@
 from django.db import models
-from bankingSystem.models.ConsentType import ConsentType
-from bankingSystem.models.ConsentStatus import ConsentStatus
+from bankingsystem.models.ConsentType import ConsentType
+from bankingsystem.models.ConsentStatus import ConsentStatus
 
 #======================================================================
 # 

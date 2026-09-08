@@ -7,14 +7,14 @@ resource "kubernetes_replication_controller" "app-master" {
         replicas = 1
 
         selector = {
-            app  = "bankingSystem"
+            app  = "bankingsystem"
         }
 
         template {
 
             metadata {
                 labels = {
-                    app  = "bankingSystem"
+                    app  = "bankingsystem"
                 }
             }
 

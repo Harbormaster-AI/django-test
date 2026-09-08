@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.Collateral import Collateral
-from bankingSystem.delegates.CollateralDelegate import CollateralDelegate
+from bankingsystem.models.Collateral import Collateral
+from bankingsystem.delegates.CollateralDelegate import CollateralDelegate
 
  #======================================================================
 # 

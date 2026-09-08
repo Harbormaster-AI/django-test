@@ -1,7 +1,7 @@
 from django.db import models
-from bankingSystem.models.CardType import CardType
-from bankingSystem.models.CardStatus import CardStatus
-from bankingSystem.models.CardNetwork import CardNetwork
+from bankingsystem.models.CardType import CardType
+from bankingsystem.models.CardStatus import CardStatus
+from bankingsystem.models.CardNetwork import CardNetwork
 
 #======================================================================
 # 

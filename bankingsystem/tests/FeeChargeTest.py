@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.FeeCharge import FeeCharge
-from bankingSystem.delegates.FeeChargeDelegate import FeeChargeDelegate
+from bankingsystem.models.FeeCharge import FeeCharge
+from bankingsystem.delegates.FeeChargeDelegate import FeeChargeDelegate
 
  #======================================================================
 # 

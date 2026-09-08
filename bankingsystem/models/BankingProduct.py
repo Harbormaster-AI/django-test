@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.ProductCategory import ProductCategory
+from bankingsystem.models.ProductCategory import ProductCategory
 
 #======================================================================
 # 

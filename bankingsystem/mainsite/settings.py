@@ -31,7 +31,7 @@ ALLOWED_HOSTS=['*']
 
 # Application definition
 INSTALLED_APPS = [
-    'bankingSystem.apps.bankingSystemConfig',
+    'bankingsystem.apps.bankingsystemConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'bankingSystem.appUrls'
+ROOT_URLCONF = 'bankingsystem.appUrls'
 
 TEMPLATES = [
     {

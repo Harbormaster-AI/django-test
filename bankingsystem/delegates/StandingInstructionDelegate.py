@@ -3,10 +3,10 @@ from django.core import serializers
 from django.db import models
 from django.db import utils
 
-from bankingSystem.models.StandingInstruction import StandingInstruction
-from bankingSystem.models.Account import Account
-from bankingSystem.models.ExternalAccount import ExternalAccount
-from bankingSystem.exceptions import Exceptions
+from bankingsystem.models.StandingInstruction import StandingInstruction
+from bankingsystem.models.Account import Account
+from bankingsystem.models.ExternalAccount import ExternalAccount
+from bankingsystem.exceptions import Exceptions
 
  #======================================================================
 # 
@@ -79,7 +79,7 @@ class StandingInstructionDelegate :
 		
 	def assignAccount( self, standingInstructionId, accountId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.AccountDelegate import AccountDelegate
+		from bankingsystem.delegates.AccountDelegate import AccountDelegate
 
 		errMsg = "Failed to assign element " + str(accountId) + " for Account on StandingInstruction"
 
@@ -127,7 +127,7 @@ class StandingInstructionDelegate :
 		
 	def assignBeneficiary( self, standingInstructionId, beneficiaryId ):
 		# lazy importing avoids circular dependencies
-		from bankingSystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
+		from bankingsystem.delegates.ExternalAccountDelegate import ExternalAccountDelegate
 
 		errMsg = "Failed to assign element " + str(beneficiaryId) + " for Beneficiary on StandingInstruction"
 

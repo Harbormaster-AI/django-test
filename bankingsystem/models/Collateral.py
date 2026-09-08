@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.CollateralType import CollateralType
+from bankingsystem.models.CollateralType import CollateralType
 
 #======================================================================
 # 

@@ -2,8 +2,8 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from bankingSystem.models.KycProfile import KycProfile
-from bankingSystem.delegates.KycProfileDelegate import KycProfileDelegate
+from bankingsystem.models.KycProfile import KycProfile
+from bankingsystem.delegates.KycProfileDelegate import KycProfileDelegate
 
  #======================================================================
 # 

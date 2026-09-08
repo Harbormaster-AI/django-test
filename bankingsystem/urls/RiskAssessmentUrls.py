@@ -1,5 +1,5 @@
 from django.urls import path
-from bankingSystem.views import RiskAssessmentView
+from bankingsystem.views import RiskAssessmentView
 
 urlpatterns = [
     path('', RiskAssessmentView.index, name='index'),

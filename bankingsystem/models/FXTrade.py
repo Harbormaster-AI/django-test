@@ -1,5 +1,5 @@
 from django.db import models
-from bankingSystem.models.TradeStatus import TradeStatus
+from bankingsystem.models.TradeStatus import TradeStatus
 
 #======================================================================
 # 
